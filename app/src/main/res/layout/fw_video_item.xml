@@ -2,7 +2,7 @@
 
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="100dp"
+    android:layout_height="240dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/parent_layout"
@@ -28,7 +28,15 @@
         android:id="@+id/play_button"
         android:visibility="gone"
         />
-
+    <TextView
+        style="@style/PlayButton"
+        app:layout_constraintStart_toStartOf="@id/thumbnail"
+        app:layout_constraintEnd_toEndOf="@id/thumbnail"
+        app:layout_constraintTop_toTopOf="@id/thumbnail"
+        app:layout_constraintBottom_toBottomOf="@id/thumbnail"
+        android:id="@+id/thumbnail_ad_badge"
+        android:visibility="gone"
+        />
     <TextView android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@id/thumbnail"

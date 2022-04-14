@@ -9,21 +9,34 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-        <com.loopnow.fireworklibrary.views.VideoFeedView
-            android:id="@+id/grid"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/pinned_container"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:itemLayout="@layout/fw_video_item"
-            app:feedLayout="grid"
-            app:showTitle="true"
-            app:titlePosition="below"
-            app:feedType="playlist"
+            android:layout_height="0dp"
+            android:padding="@dimen/fw_padding_8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            app:pageSize ="4"
-            app:autoPlay="true"
-            app:autoPlayOnComplete="true"
-            app:imageStyle="@style/CustomImageStyle"
-            app:textStyle="@style/CustomCaptionStyle" />
+            <com.loopnow.fireworklibrary.views.VideoFeedView
+                android:id="@+id/grid"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="360dp"
+                app:adLabel="ad"
+                app:autoPlay="true"
+                app:feedLayout="horizontal"
+                app:feedType="discover"
+                app:imageStyle="@style/CustomImageStyle"
+                app:layout_constraintTop_toTopOf="parent"
+                app:pageSize="4"
+                app:playlistId="vJ0Yno"
+                app:textStyle="@style/CustomCaptionStyle"
+
+
+                app:titlePosition="below" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
